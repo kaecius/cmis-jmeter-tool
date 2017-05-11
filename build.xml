@@ -41,7 +41,7 @@
 
     <jmeter
        jmeterhome="${jmeter.home}"
-       testplan="${basedir}/loadtests/cmis-bench.jmx"
+       testplan="${basedir}/loadtests/alfresco-cmis-test-plan.jmx"
        resultlog="${report.path}/bench-results-${stamp}.xml">
       <property name="jmeter.save.saveservice.output_format" value="xml"/>
       <property name="jmeter.save.saveservice.assertion_results" value="all"/>

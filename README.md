@@ -3,16 +3,7 @@
 
 * Description
 
-  This is a Nuxeo CMIS benchmark using JMeter script.
-
-  The test scenario is the following:
-
-  1. Creates a random folder at the root level
-  2. Creates 10 file documents with random contents using a french
-     corpus
-  3. Performs a getChildren on the folder
-
-  This senario is running in loop for the specified duration.
+  This is a CMIS benchmark using JMeter script, is modified for create documents and folder in a specified path given by ``` build.properties or .jmx ```.
 
 * Requirement
 
@@ -45,9 +36,9 @@
 
 * Building and deploying
 
-  Make sure you are allowed to write into the $JMETER_HOME/lib/junit folder then:
+  Make sure you are allowed to write into the $JMETER_HOME/lib/junit folder (ant deploy will copy generated jars in that folder):
 
-  ant deploy
+  ``` ant deploy ```
 
 * Running the bench with ant
 
@@ -59,7 +50,7 @@
   
   Load the ./loadtests/cmis-bench.xml file.
 
-  Edit the "Parameters user defined variables". For instnace the
+  Edit the "Parameters user defined variables". For instance the
   default value for ${__property(rampup,RAMPUP,4)} is 4.
 
 * Running the junit test with maven
@@ -67,8 +58,4 @@
   This will use the default properties hard coded in the junit test.
 
   mvn test
-
-* To do
-** TODO Add a delete action
-** TODO Render the throughput in the report
    

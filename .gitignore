@@ -1,10 +1,12 @@
 syntax:glob
 
 reports/*
-target/*
 .classpath
 .project
 .settings
+*.iml
 *~
 jmeter.log
 build.properties
+/target/
+/.idea/

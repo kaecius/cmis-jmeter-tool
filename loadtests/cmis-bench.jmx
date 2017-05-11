@@ -35,7 +35,7 @@
           </elementProp>
           <elementProp name="FOLDER_PATH" elementType="Argument">
             <stringProp name="Argument.name">FOLDER_PATH</stringProp>
-            <stringProp name="Argument.value">jm-${__time(MDHMS)}</stringProp>
+            <stringProp name="Argument.value">/Compartidos</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SIZE_KB" elementType="Argument">
@@ -172,31 +172,37 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="createFolder" enabled="true">
-          <stringProp name="junitSampler.classname">org.nuxeo.jmeter.cmis.CmisTest</stringProp>
-          <stringProp name="junitsampler.constructorstring">username=${USERNAME},password=${PASSWORD},base_url=${BASE_URL},folder_path=${FOLDER_PATH},thread_num=${__threadNum}</stringProp>
-          <stringProp name="junitsampler.method">testCreateFolder</stringProp>
-          <stringProp name="junitsampler.pkg.filter"></stringProp>
-          <stringProp name="junitsampler.success">Test successful</stringProp>
-          <stringProp name="junitsampler.success.code">1000</stringProp>
-          <stringProp name="junitsampler.failure">Test failed</stringProp>
-          <stringProp name="junitsampler.failure.code">0001</stringProp>
-          <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
-          <stringProp name="junitsampler.error.code">9999</stringProp>
-          <stringProp name="junitsampler.exec.setup">false</stringProp>
-          <stringProp name="junitsampler.append.error">false</stringProp>
-          <stringProp name="junitsampler.append.exception">false</stringProp>
-        </JUnitSampler>
-        <hashTree/>
         <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">10</stringProp>
+          <stringProp name="LoopController.loops">${LOOP}</stringProp>
         </LoopController>
         <hashTree>
           <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="createDocument" enabled="true">
-            <stringProp name="junitSampler.classname">org.nuxeo.jmeter.cmis.CmisTest</stringProp>
+            <stringProp name="junitSampler.classname">junit.extensions.ExceptionTestCase</stringProp>
             <stringProp name="junitsampler.constructorstring">username=${USERNAME},password=${PASSWORD},base_url=${BASE_URL},folder_path=${FOLDER_PATH},thread_num=${__threadNum},size_kb=${SIZE_KB}</stringProp>
-            <stringProp name="junitsampler.method">testCreateDocument</stringProp>
+            <stringProp name="junitsampler.method"></stringProp>
+            <stringProp name="junitsampler.pkg.filter"></stringProp>
+            <stringProp name="junitsampler.success">Test successful</stringProp>
+            <stringProp name="junitsampler.success.code">1000</stringProp>
+            <stringProp name="junitsampler.failure">Test failed</stringProp>
+            <stringProp name="junitsampler.failure.code">0001</stringProp>
+            <stringProp name="junitsampler.error">An unexpected error occured</stringProp>
+            <stringProp name="junitsampler.error.code">9999</stringProp>
+            <stringProp name="junitsampler.exec.setup">false</stringProp>
+            <stringProp name="junitsampler.append.error">false</stringProp>
+            <stringProp name="junitsampler.append.exception">false</stringProp>
+          </JUnitSampler>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">${LOOP}</stringProp>
+        </LoopController>
+        <hashTree>
+          <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="createDocument" enabled="true">
+            <stringProp name="junitSampler.classname">junit.extensions.ExceptionTestCase</stringProp>
+            <stringProp name="junitsampler.constructorstring">username=${USERNAME},password=${PASSWORD},base_url=${BASE_URL},folder_path=${FOLDER_PATH},thread_num=${__threadNum},size_kb=${SIZE_KB}</stringProp>
+            <stringProp name="junitsampler.method"></stringProp>
             <stringProp name="junitsampler.pkg.filter"></stringProp>
             <stringProp name="junitsampler.success">Test successful</stringProp>
             <stringProp name="junitsampler.success.code">1000</stringProp>
@@ -211,9 +217,9 @@
           <hashTree/>
         </hashTree>
         <JUnitSampler guiclass="JUnitTestSamplerGui" testclass="JUnitSampler" testname="getChildren" enabled="true">
-          <stringProp name="junitSampler.classname">org.nuxeo.jmeter.cmis.CmisTest</stringProp>
+          <stringProp name="junitSampler.classname">junit.extensions.ExceptionTestCase</stringProp>
           <stringProp name="junitsampler.constructorstring">username=${USERNAME},password=${PASSWORD},base_url=${BASE_URL},folder_path=${FOLDER_PATH},thread_num=${__threadNum}</stringProp>
-          <stringProp name="junitsampler.method">testGetChildren</stringProp>
+          <stringProp name="junitsampler.method"></stringProp>
           <stringProp name="junitsampler.pkg.filter"></stringProp>
           <stringProp name="junitsampler.success">Test successful</stringProp>
           <stringProp name="junitsampler.success.code">1000</stringProp>
