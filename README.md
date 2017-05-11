@@ -58,4 +58,7 @@
   This will use the default properties hard coded in the junit test.
 
   mvn test
+  
+  * TODO
+  	- Add path param to build.xml for console testing with ant
    
