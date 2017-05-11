@@ -3,7 +3,7 @@
 
 * Description
 
-  This is a CMIS benchmark using JMeter script, is modified for create documents and folder in a specified path given by  a build.properties or a .jmx file.
+  This is a CMIS benchmark using JMeter script, is modified for creating documents and folders in a specified path given by  a path property in a .jmx file.
 
 * Requirement
 
