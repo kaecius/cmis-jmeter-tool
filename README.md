@@ -3,7 +3,7 @@
 
 * Description
 
-  This is a CMIS benchmark using JMeter script, is modified for create documents and folder in a specified path given by  `build.properties or .jmx`.
+  This is a CMIS benchmark using JMeter script, is modified for create documents and folder in a specified path given by `build.properties or .jmx`.
 
 * Requirement
 
@@ -38,7 +38,7 @@
 
   Make sure you are allowed to write into the $JMETER_HOME/lib/junit folder (ant deploy will copy generated jars in that folder):
 
-  ` ant deploy `
+  `ant deploy`
 
 * Running the bench with ant
 
