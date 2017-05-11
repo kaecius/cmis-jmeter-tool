@@ -1,5 +1,5 @@
 #    -*- mode: org -*-
-#+TITLE: cmisbench JMeter
+#+TITLE: Cmis bench JMeter by a given path
 
 * Description
 
